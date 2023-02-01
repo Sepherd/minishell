@@ -6,7 +6,7 @@
 /*   By: arecce <arecce@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/19 13:15:20 by ohassyao          #+#    #+#             */
-/*   Updated: 2023/01/17 19:15:06 by arecce           ###   ########.fr       */
+/*   Updated: 2023/02/01 18:51:49 by arecce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,14 @@ void		ft_echo(t_prompt *prompt);
 void		ft_dquote(t_prompt *p);
 int			ft_setenv(const char *name, const char *val, int rep, t_env **env);
 int			ft_unsetenv(const char *name, t_env **env);
-void		get_input(t_prompt *p);
-int			str_isalpha(t_prompt *p);
 
 // utils
 int			ft_strcmp(char *out, char *str);
 void		ft_exit(t_prompt *prompt);
+void		get_input(t_prompt *p);
+int			str_isalpha(char *str);
+int			count_quotes(char *str);
+void		split_input(t_prompt *p);
 
 /* Prints a custom error message to standard error */
 void		*ft_error(int error, char *str);
