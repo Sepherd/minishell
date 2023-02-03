@@ -6,7 +6,7 @@
 /*   By: arecce <arecce@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/17 12:06:05 by arecce            #+#    #+#             */
-/*   Updated: 2023/02/01 19:21:50 by arecce           ###   ########.fr       */
+/*   Updated: 2023/02/02 12:10:52 by arecce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ void	split_input(t_prompt *p)
 		}
 		i++;
 	}
-	p->cmds[0] = ft_strtrim(p->cmds[0], "\"\'");
+	// p->cmds[0] = ft_strtrim(p->cmds[0], "\"\'");
 }
 
 void	get_input(t_prompt *p)

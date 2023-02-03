@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   utils.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ohassyao <ohassyao@student.42.fr>          +#+  +:+       +#+        */
+/*   By: arecce <arecce@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/28 15:06:10 by ohassyao          #+#    #+#             */
-/*   Updated: 2023/01/16 11:01:33 by ohassyao         ###   ########.fr       */
+/*   Updated: 2023/02/02 12:39:03 by arecce           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,26 +15,27 @@
 int	ft_strcmp(char *out, char *str)
 {
 	int	i;
-	int	lenout;
-	int	lenstr;
+	int	k;
+	// int	lenout;
+	// int	lenstr;
 
 	i = 0;
-	lenstr = ft_strlen(str);
-	lenout = ft_strlen(out);
-	if (lenout != lenstr)
-		return (0);
-	while (i < lenout)
+	k = 0;
+	// lenstr = ft_strlen(str);
+	// lenout = ft_strlen(out);
+	// if (lenout != lenstr)
+	// 	return (0);
+	while (out[i])
 	{
-		if (out[i] != str[i])
+		if (out[i] == '\'' || out[i] == '\"')
+		{
+			i++;
+			continue ;
+		}
+		else if (out[i] != str[k])
 			return (0);
 		i++;
+		k++;
 	}
 	return (1);
 }
-
-
-
-
-
-
-
